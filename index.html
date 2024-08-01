@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulário Exemplo</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+        }
+        form {
+            max-width: 600px;
+            margin: auto;
+        }
+        .form-group {
+            margin-bottom: 15px;
+        }
+        .form-group label {
+            display: block;
+            margin-bottom: 5px;
+        }
+        .form-group input[type="text"],
+        .form-group input[type="password"],
+        .form-group input[type="email"] {
+            width: 100%;
+            padding: 8px;
+            box-sizing: border-box;
+        }
+        .form-group input[type="checkbox"],
+        .form-group input[type="radio"] {
+            margin-right: 10px;
+        }
+        .form-group button {
+            padding: 10px 15px;
+            margin-right: 10px;
+            border: none;
+            cursor: pointer;
+        }
+        .form-group button[type="submit"] {
+            background-color: #4CAF50;
+            color: white;
+        }
+        .form-group button[type="reset"] {
+            background-color: #f44336;
+            color: white;
+        }
+    </style>
+</head>
+<body>
+
+    <h1>Formulário de Exemplo</h1>
+
+    <form action="/enviar-formulario" method="post">
+        <div class="form-group">
+            <label for="nome">Nome:</label>
+            <input type="text" id="nome" name="nome" placeholder="Digite seu nome" required>
+        </div>
+
+        <div class="form-group">
+            <label for="senha">Senha:</label>
+            <input type="password" id="senha" name="senha" placeholder="Digite sua senha" required>
+        </div>
+
+        <div class="form-group">
+            <label for="email">E-mail:</label>
+            <input type="email" id="email" name="email" placeholder="Digite seu e-mail" required>
+        </div>
+
+        <div class="form-group">
+            <label>Opções:</label>
+            <input type="checkbox" id="opcao1" name="opcoes" value="opcao1">
+            <label for="opcao1">Opção 1</label><br>
+            <input type="checkbox" id="opcao2" name="opcoes" value="opcao2">
+            <label for="opcao2">Opção 2</label><br>
+            <input type="checkbox" id="opcao3" name="opcoes" value="opcao3">
+            <label for="opcao3">Opção 3</label><br>
+            <input type="checkbox" id="opcao4" name="opcoes" value="opcao4">
+            <label for="opcao4">Opção 4</label><br>
+            <input type="checkbox" id="opcao5" name="opcoes" value="opcao5">
+            <label for="opcao5">Opção 5</label>
+        </div>
+
+        <div class="form-group">
+            <label>Escolha uma opção:</label>
+            <input type="radio" id="opcaoA" name="escolha" value="opcaoA">
+            <label for="opcaoA">Opção A</label><br>
+            <input type="radio" id="opcaoB" name="escolha" value="opcaoB">
+            <label for="opcaoB">Opção B</label>
+        </div>
+
+        <div class="form-group">
+            <button type="submit">Enviar</button>
+            <button type="reset">Limpar</button>
+        </div>
+    </form>
+
+</body>
+</html>
